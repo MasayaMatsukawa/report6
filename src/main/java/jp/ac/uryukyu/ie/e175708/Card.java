@@ -1,25 +1,32 @@
 package jp.ac.uryukyu.ie.e175708;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Collections;
 
 public class Card {
-    private char ShuffledCard[];
+    private String ShuffledCard[];
+
+    public String[] getShuffledCard(){
+        return ShuffledCard;
+    }
 
     public Card() {
-        MkCardSet();
+        ShuffleCard();
     }
+
 
     public void ShuffleCard(){
-        char CardSet[] = MkCardSet();
-        char Shuffled[] = new char[52];
-        
+        String CardSet[] = MkCardSet();
+        List<String> CardList =Arrays.asList(CardSet);
+        Collections.shuffle(CardList);
+        ShuffledCard = (String[])CardList.toArray(new String[CardList.size()]);
     }
 
-    public char[] MkCardSet() {
-        char CardType[] = MkCardType();
-        char CardSet[] = new char[52];
+    public String[] MkCardSet() {
+        String CardType[] = MkCardType();
+        String CardSet[] = new String[52];
         int k = 0;
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < 4; j++) {
@@ -29,15 +36,17 @@ public class Card {
         }
         return CardSet;
     }
-    public char[] MkCardType() {
-        char CardType[] = new char[13];
-        CardType[0] = 'A';
-        CardType[9] = 'X';
-        CardType[10] = 'J';
-        CardType[11] = 'Q';
-        CardType[12] = 'K';
+    public String[] MkCardType() {
+        String CardType[] = new String[13];
+        CardType[0] = "A";
+        CardType[9] = "X";
+        CardType[10] = "J";
+        CardType[11] = "Q";
+        CardType[12] = "K";
+        int num;
         for (int i = 1; i < 9; i++) {
-            CardType[i] = (char) (i + 1);
+            num = i+1;
+            CardType[i] = String.valueOf(num);
         }
         return CardType;
     }
