@@ -26,6 +26,9 @@ public class Board {
         System.out.println(c);
         System.out.println(d);
     }
+    /*
+    ボードを出力する
+     */
 
     public Board(){
         MkBoard();
@@ -46,6 +49,11 @@ public class Board {
             }
         }
     }
+    /*
+    ゲームをプレイするための基本的なボードを作成する、それぞれの列のStringオブジェクトを用意して
+    出力する際に、横に並べるようにする。こうすることで4×13の裏返しのカードを用意することができる。
+     */
+
     public void ChangeBoard(String str,int x){
         a="a";
         b="b";
@@ -54,4 +62,7 @@ public class Board {
         obj.setEmp(str,x);
         MkBoard();
     }
+    /*
+    特定の入力がされた際に、?のボード(裏返しのカード)の中身をカードと入れ替える。
+     */
 }

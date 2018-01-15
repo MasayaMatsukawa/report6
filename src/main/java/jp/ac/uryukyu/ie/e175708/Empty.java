@@ -13,6 +13,11 @@ public class Empty {
     public void setEmp(String str,int x){
         emp[x] = str;
     }
+    /*
+    裏返しのカードは、それぞれ１３種類のカードに対応している。カードをひっくり返す際
+    それぞれのカードを反映させるためにsetterを用い中身を変えられるようにする。
+     */
+
 
 
     public void MkEmpty() {
@@ -21,5 +26,8 @@ public class Empty {
             emp[i] = "?";
         }
     }
+    /*
+    ５２個の「?」の配列を作る。この「?」は裏返しのカードとして用いる。
+     */
 }
 

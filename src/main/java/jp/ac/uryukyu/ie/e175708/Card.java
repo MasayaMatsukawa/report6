@@ -23,6 +23,10 @@ public class Card {
         Collections.shuffle(CardList);
         ShuffledCard = (String[])CardList.toArray(new String[CardList.size()]);
     }
+    /*
+    カードが順番に並べられているので、一度配列をリストに変換し、リストをシャッフルした後
+    配列に戻す。
+     */
 
     public String[] MkCardSet() {
         String CardType[] = MkCardType();
@@ -36,6 +40,9 @@ public class Card {
         }
         return CardSet;
     }
+    /*
+    カードはそれぞれ４セット分必要なのでfor文を回してそれぞれ４枚にしていく
+     */
     public String[] MkCardType() {
         String CardType[] = new String[13];
         CardType[0] = "A";
@@ -50,4 +57,7 @@ public class Card {
         }
         return CardType;
     }
+    /*
+    カードは計１３種類ある、A,X,J,Q,K以外のカードは数字で並んでいるため、for文で回して作っている。
+     */
 }
