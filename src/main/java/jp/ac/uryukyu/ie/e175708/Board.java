@@ -19,6 +19,10 @@ public class Board {
     public String getD(){
         return d;
     }
+    public Empty getObj(){
+        return obj;
+    }
+
 
     public void PrintBoard(){
         System.out.println(a);
@@ -63,6 +67,6 @@ public class Board {
         MkBoard();
     }
     /*
-    特定の入力がされた際に、?のボード(裏返しのカード)の中身をカードと入れ替える。
+    特定の入力がされた際に、?のボード(裏返しのカード)の中身を引数strと入れ替える。
      */
 }
