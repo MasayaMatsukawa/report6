@@ -10,6 +10,10 @@ public class Empty {
 
     }
 
+    public void setEmp(String str,int x){
+        emp[x] = str;
+    }
+
 
     public void MkEmpty() {
         emp = new String[52];
