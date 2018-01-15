@@ -2,6 +2,9 @@ package jp.ac.uryukyu.ie.e175708;
 
 public class Empty {
     private String emp[];
+    public String[] getEmp(){
+        return emp;
+    }
     public Empty() {
         MkEmpty();
 
